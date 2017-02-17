@@ -1,0 +1,9 @@
+platform :ios, '9.0'
+
+target 'ExpressionKeyboard' do
+use_frameworks!
+
+pod 'YYModel'
+pod 'pop'
+
+end

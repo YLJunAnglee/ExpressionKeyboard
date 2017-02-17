@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IQn-9Q-NIi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Aga-HF-2lf">
+            <objects>
+                <navigationController id="IQn-9Q-NIi" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W63-FO-XAA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZW9-ya-s5y" kind="relationship" relationship="rootViewController" id="ktP-61-U8G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q6G-kc-t7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-623" y="60"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hV6-zZ-6ss">
+            <objects>
+                <viewController id="ZW9-ya-s5y" customClass="ViewController" customModule="ExpressionKeyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uW1-6t-c0d"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pri-Fc-2gk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g7H-P4-gvw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8dW-fo-yhy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8dW-fo-yhy" firstAttribute="leading" secondItem="g7H-P4-gvw" secondAttribute="leading" id="G4l-f3-4Rd"/>
+                            <constraint firstAttribute="trailing" secondItem="8dW-fo-yhy" secondAttribute="trailing" id="NTG-0c-aKf"/>
+                            <constraint firstItem="Pri-Fc-2gk" firstAttribute="top" secondItem="8dW-fo-yhy" secondAttribute="bottom" id="O4f-4G-Ggc"/>
+                            <constraint firstItem="8dW-fo-yhy" firstAttribute="top" secondItem="g7H-P4-gvw" secondAttribute="top" id="ofe-ZA-d9z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LMZ-pe-EKF"/>
+                    <connections>
+                        <outlet property="textView" destination="8dW-fo-yhy" id="UHO-ZM-ImD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ZL-tL-MrI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="40"/>
+        </scene>
+    </scenes>
+</document>
